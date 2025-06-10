@@ -1,0 +1,400 @@
+:root {
+    --main-bg: #e3f6e3;
+    --header-bg: #bda77b;
+    --header-border: #8c7a5b;
+    --button-bg: #d3e97a;
+    --button-hover: #b7d45a;
+    --button-text: #3d3d1a;
+    --panel-bg: #f7f3e3;
+    --panel-border: #bda77b;
+    --accent: #7bbd6c;
+    --wood: #a67c52;
+    --wood-dark: #7b5a36;
+    --text-main: #2e3c1b;
+    --text-muted: #6e7c5b;
+  }
+  body {
+    margin: 0;
+    font-family: 'Nunito', Arial, sans-serif;
+    background: var(--main-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #e3f6e3 0%, #b6e3c6 100%);
+    position: relative;
+    overflow-x: hidden;
+  }
+  /* Header/Nav */
+  .header {
+    background: var(--header-bg);
+    border-bottom: 4px solid var(--header-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px #0002;
+  }
+  .nav {
+    display: flex;
+    gap: 1.2rem;
+  }
+  .nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    background: #e5d4b3;
+    border: 2px solid var(--wood-dark);
+    box-shadow: 0 2px 0 #bda77b;
+    transition: background 0.2s;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+  }
+  .nav a:hover, .nav a.active {
+    background: var(--button-bg);
+    color: var(--button-text);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-img {
+    width: 60px;
+    height: 60px;
+    background: url('https://i.imgur.com/5Xw7z7g.png') center/contain no-repeat;
+    /* Placeholder: Replace with your own logo */
+    border-radius: 50%;
+    border: 3px solid var(--wood-dark);
+    background-color: #fff;
+  }
+  .logo-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2rem;
+    color: var(--wood-dark);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #e5d4b3, 0 2px 4px #0002;
+    font-weight: 700;
+  }
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: url('https://i.imgur.com/7hT2w6X.png') bottom center/cover no-repeat;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+  .hero-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #fff, 0 2px 8px #0002;
+  }
+  .hero-desc {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+  }
+  .hero-btn {
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.8rem 2.2rem;
+    border: 3px solid var(--wood-dark);
+    border-radius: 10px;
+    box-shadow: 0 4px 0 #bda77b;
+    cursor: pointer;
+    margin-top: 1.2rem;
+    transition: background 0.2s, transform 0.1s;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .hero-btn:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px) scale(1.03);
+  }
+  /* Features Section */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem auto 2rem auto;
+    max-width: 1100px;
+  }
+  .feature-card {
+    background: var(--panel-bg);
+    border: 3px solid var(--panel-border);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px #0001;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 320px;
+    min-width: 240px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.15s;
+  }
+  .feature-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: var(--accent);
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+    color: var(--accent);
+    filter: drop-shadow(0 2px 2px #b6e3c6);
+  }
+  .feature-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--wood-dark);
+  }
+  .feature-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+  }
+  /* Community Section */
+  .community {
+    background: var(--panel-bg);
+    border-top: 4px solid var(--panel-border);
+    border-bottom: 4px solid var(--panel-border);
+    margin: 2rem 0 0 0;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+  }
+  .community-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.7rem;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+  }
+  .community-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    padding: 1.2rem 0 1.5rem 0;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+  }
+  /* Decorative bottom grass */
+  .bottom-grass {
+    width: 100vw;
+    height: 80px;
+    background: url('https://i.imgur.com/4U8n8v8.png') repeat-x bottom center/contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.85;
+  }
+  @media (max-width: 800px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+    .feature-card {
+      max-width: 95vw;
+    }
+    .logo-title {
+      font-size: 1.3rem;
+    }
+    .hero-title {
+      font-size: 2.1rem;
+    }
+  }
+
+  /* ... (keep your existing CSS above this) ... */
+
+/* Gallery Section */
+.gallery-section {
+    background: #fffbe9;
+    padding: 4rem 0 6rem 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.2rem;
+    color: var(--wood-dark);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  .gallery-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    width: 100%;
+  }
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px #0001;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    width: 100%;
+  }
+  .gallery-container:hover {
+    box-shadow: 0 8px 32px #0002;
+    border-color: var(--accent);
+  }
+  .gallery-image {
+    flex: 0 0 260px;
+    height: 180px;
+    overflow: hidden;
+    background: #e3f6e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-right: 2px solid var(--panel-border);
+    display: block;
+  }
+  .gallery-info {
+    flex: 1 1 0;
+    padding: 1.5rem 2rem;
+    text-align: left;
+  }
+  .gallery-info h2 {
+    margin: 0 0 0.7rem 0;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--wood-dark);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  .gallery-info p {
+    color: var(--text-muted);
+    font-size: 1.08rem;
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .gallery-container {
+      flex-direction: column;
+      max-width: 98vw;
+    }
+    .gallery-image {
+      width: 100%;
+      border-right: none;
+      border-bottom: 2px solid var(--panel-border);
+      height: 180px;
+    }
+    .gallery-info {
+      padding: 1.2rem 1.1rem;
+      text-align: center;
+    }
+  }
+
+/* Centered Top Logo */
+.top-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .top-logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 4px 24px #0002, 0 0 0 4px #fffbe9;
+    border: 3px solid var(--wood-dark);
+    background: #fff;
+  }
+
+
+  .tops-logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: 0 4px 24px #0002, 0 0 0 4px #fffbe9;
+    border: 3px solid var(--wood-dark);
+    background: #fff;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* --- Join Page Side-by-Side Cards --- */
+.join-features-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .join-card {
+    max-width: 340px;
+    min-width: 240px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Discord Icon Styling */
+  .discord-icon-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #5865F2;
+    box-shadow: 0 2px 8px #0001;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  /* Responsive: Stack cards on small screens */
+  @media (max-width: 800px) {
+    .join-features-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
