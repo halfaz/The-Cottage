@@ -64,7 +64,7 @@
   .logo-img {
     width: 60px;
     height: 60px;
-    background: url('https://i.imgur.com/5Xw7z7g.png') center/contain no-repeat;
+    background: url('') center/contain no-repeat;
     /* Placeholder: Replace with your own logo */
     border-radius: 50%;
     border: 3px solid var(--wood-dark);
@@ -92,7 +92,7 @@
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
-    background: url('https://i.imgur.com/7hT2w6X.png') bottom center/cover no-repeat;
+    background: url('') bottom center/cover no-repeat;
     opacity: 0.25;
     pointer-events: none;
   }
@@ -209,7 +209,7 @@
   .bottom-grass {
     width: 100vw;
     height: 80px;
-    background: url('https://i.imgur.com/4U8n8v8.png') repeat-x bottom center/contain;
+    background: url('') repeat-x bottom center/contain;
     position: absolute;
     left: 0;
     bottom: 0;
