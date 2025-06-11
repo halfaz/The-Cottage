@@ -207,7 +207,6 @@
   .bottom-grass {
     width: 100vw;
     height: 80px;
-    background: url('') repeat-x bottom center/contain;
     position: absolute;
     left: 0;
     bottom: 0;
